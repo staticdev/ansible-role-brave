@@ -3,6 +3,7 @@
   ansible.builtin.get_url:
     url: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
     dest: "/usr/share/keyrings/brave-browser-archive-keyring.gpg"
+  become: true
 
 - name: Add Brave repository to list of repositories
   ansible.builtin.shell: |
