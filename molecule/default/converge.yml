@@ -7,16 +7,5 @@
       ansible.builtin.apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
-    - name: Ensures dependencies are installed
-      ansible.builtin.apt:
-        name: "{{ item }}"
-        state: present
-      when: ansible_os_family == 'Debian'
-      with_items:
-        - gnupg
-        - libdrm-dev
-        - libgbm-dev
-        - libxshmfence1
-
   roles:
     - staticdev.brave
