@@ -7,13 +7,11 @@
   become: true
 
 - name: Add Brave repository to list of repositories
-  ansible.builtin.shell: |
-    set -o pipefail
-    echo 'deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main' |\
-      sudo tee -a /etc/apt/sources.list.d/brave-browser-release.list
-    creates=/etc/apt/sources.list.d/brave-browser-release.list
-  args:
-    executable: /bin/bash
+  become: true
+  ansible.builtin.copy:
+    dest: /etc/apt/sources.list.d/brave-browser-release.list
+    content: |
+      deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
 
 - name: Update apt cache
   ansible.builtin.apt: update_cache=yes
