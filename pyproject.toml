@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ansible-role-brave"
-version = "1.0.1"
+version = "1.1.0"
 description = "Ansible role to install Brave browser."
 authors = ["staticdev <staticdev-support@proton.me>"]
 license = "MIT"
