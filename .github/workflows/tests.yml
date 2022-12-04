@@ -11,7 +11,7 @@ name: Tests
 
 defaults:
   run:
-    working-directory: 'staticdev.brave'
+    working-directory: "staticdev.brave"
 
 jobs:
   lint:
@@ -21,7 +21,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
         with:
-          path: 'staticdev.brave'
+          path: "staticdev.brave"
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -53,7 +53,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
         with:
-          path: 'staticdev.brave'
+          path: "staticdev.brave"
 
       - name: Set up Python
         uses: actions/setup-python@v4
