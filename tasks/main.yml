@@ -20,13 +20,9 @@
       deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
     mode: "0644"
 
-- name: Update apt cache
-  ansible.builtin.apt:
-    update_cache: true
-  become: true
-
 - name: Install Brave
   ansible.builtin.apt:
     name: brave-browser
     state: present
+    update_cache: true
   become: true
