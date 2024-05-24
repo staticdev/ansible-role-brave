@@ -1,7 +1,10 @@
 *.retry
-*/__pycache__
-*.pyc
-/.python-version
 
 # Visual Studio Code
 .vscode/
+
+# Python
+.venv
+*/__pycache__
+*.pyc
+/.python-version

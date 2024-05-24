@@ -48,6 +48,9 @@ jobs:
           # https://github.com/geerlingguy/docker-ubuntu2204-ansible/issues/6
           # - ubuntu2204
           - ubuntu2004
+          - fedora40
+          - rockylinux8
+          - rockylinux9
 
     steps:
       - name: Check out the repository
